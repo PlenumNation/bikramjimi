@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#10131d" />
+  <meta name="description" content="BIKRAM JIMI — a Nepali and English digital platform." />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <title>BIKRAM JIMI — Digital Platform</title>
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="BIKRAM JIMI home"><span class="brand-mark">BJ</span><span>BIKRAM <b>JIMI</b></span></a>
+      <nav class="top-actions">
+        <button id="languageBtn" class="ghost-btn" type="button">नेपाली</button>
+        <button id="themeBtn" class="icon-btn" type="button" aria-label="Toggle theme">☼</button>
+        <button id="signInTop" class="primary-btn" type="button">Sign in</button>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow" data-i18n="eyebrow">ONE PLATFORM · MANY POSSIBILITIES</span>
+          <h1 data-i18n="heroTitle">Your digital world,<br><em>in one place.</em></h1>
+          <p data-i18n="heroText">A connected home for your community, learning, entertainment and creativity.</p>
+          <div class="hero-actions">
+            <button id="getStarted" class="primary-btn large" type="button" data-i18n="getStarted">Get started</button>
+            <a class="text-link" href="#platform" data-i18n="explore">Explore platform ↓</a>
+          </div>
+          <div class="trust-line"><span class="status-dot"></span><span data-i18n="secureLine">Built with account security and privacy in mind</span></div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="core-card"><span class="core-logo">BJ</span><strong>BIKRAM JIMI</strong><small>ULTIMATE DIGITAL PLATFORM</small></div>
+          <div class="float-chip chip-one">✦ Community</div><div class="float-chip chip-two">▶ Learning</div><div class="float-chip chip-three">♫ Creativity</div>
+        </div>
+      </section>
+
+      <section id="platform" class="section">
+        <div class="section-heading"><div><span class="eyebrow" data-i18n="platformEyebrow">THE PLATFORM</span><h2 data-i18n="platformTitle">A foundation that can grow.</h2></div><p data-i18n="platformText">The first release establishes the secure account and platform foundation. Additional systems will be released in tested phases.</p></div>
+        <div class="feature-grid">
+          <article class="feature-card"><span class="feature-icon">◎</span><h3>Personal profile</h3><p>Account identity, verified email and profile basics.</p><span class="feature-state live">Available in Phase 1</span></article>
+          <article class="feature-card"><span class="feature-icon">⌘</span><h3>Role-aware access</h3><p>Access is based on trusted server-issued role claims.</p><span class="feature-state live">Foundation included</span></article>
+          <article class="feature-card"><span class="feature-icon">◈</span><h3>Social & community</h3><p>Posts, groups and moderation will be developed in a later phase.</p><span class="feature-state planned">Planned</span></article>
+          <article class="feature-card"><span class="feature-icon">▶</span><h3>Entertainment</h3><p>Video, music and media libraries with rights-aware publishing.</p><span class="feature-state planned">Planned</span></article>
+          <article class="feature-card"><span class="feature-icon">▤</span><h3>Learning & work</h3><p>Courses, student tools and job listings with permissions.</p><span class="feature-state planned">Planned</span></article>
+          <article class="feature-card"><span class="feature-icon">▣</span><h3>Marketplace</h3><p>Products, orders and verified server-side payment processing.</p><span class="feature-state planned">Planned</span></article>
+        </div>
+      </section>
+
+      <section class="account-section" id="account">
+        <div class="account-intro"><span class="eyebrow">YOUR ACCOUNT</span><h2>Join BIKRAM JIMI.</h2><p>Create an account or sign in to view your personal dashboard.</p><div class="account-note">Email verification is required. Administrative permissions cannot be assigned from this page.</div></div>
+        <div class="auth-card">
+          <div class="auth-tabs"><button class="tab active" id="loginTab" type="button">Sign in</button><button class="tab" id="registerTab" type="button">Create account</button></div>
+          <form id="authForm">
+            <label id="nameWrap" class="field hidden">Full name<input id="fullName" type="text" autocomplete="name" maxlength="80" /></label>
+            <label class="field">Email address<input id="email" type="email" autocomplete="email" required maxlength="254" /></label>
+            <label class="field">Password<input id="password" type="password" autocomplete="current-password" required minlength="8" maxlength="128" /></label>
+            <button id="authSubmit" class="primary-btn full" type="submit">Sign in</button>
+            <button id="googleBtn" class="google-btn full" type="button"><span>G</span> Continue with Google</button>
+            <button id="resetBtn" class="reset-btn" type="button">Forgot password?</button>
+            <p id="authMessage" class="message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section id="dashboard" class="dashboard hidden">
+        <div class="dashboard-head"><div><span class="eyebrow">ACCOUNT CENTER</span><h2 id="welcomeName">Welcome</h2><p id="accountEmail"></p></div><button id="signOutBtn" class="outline-btn" type="button">Sign out</button></div>
+        <div class="dashboard-grid">
+          <article class="dash-card"><span class="muted">ACCOUNT ROLE</span><strong id="accountRole">Normal User</strong><small>Roles are assigned by trusted administrators.</small></article>
+          <article class="dash-card"><span class="muted">EMAIL STATUS</span><strong id="emailStatus">Unverified</strong><small id="verifyHint">Verify your email to complete setup.</small><button id="verifyBtn" class="small-btn" type="button">Resend verification</button></article>
+          <article class="dash-card"><span class="muted">ACCOUNT SECURITY</span><strong>Protected</strong><small>Sign-in is handled by Firebase Authentication.</small></article>
+        </div>
+        <div class="notice">This is the Phase 1 account dashboard. Other role dashboards and platform modules will appear after they are implemented and security-tested.</div>
+      </section>
+    </main>
+    <footer><span>© <span id="year"></span> BIKRAM JIMI</span><span>Made for a connected digital community</span></footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
