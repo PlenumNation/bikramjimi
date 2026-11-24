@@ -1,0 +1,26 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "users": {
+      "$uid": {
+        ".read": "auth != null && (auth.uid === $uid || auth.token.role === 'super_admin' || auth.token.role === 'admin')",
+        "displayName": {
+          ".write": "auth != null && auth.uid === $uid",
+          ".validate": "newData.isString() && newData.val().length <= 80"
+        },
+        "photoURL": {
+          ".write": "auth != null && auth.uid === $uid",
+          ".validate": "newData.isString() && newData.val().length <= 2048"
+        },
+        "preferences": {
+          ".write": "auth != null && auth.uid === $uid",
+          ".validate": "newData.hasChildren()"
+        },
+        "role": { ".write": false },
+        "email": { ".write": false },
+        "createdAt": { ".write": false }
+      }
+    }
+  }
+}
