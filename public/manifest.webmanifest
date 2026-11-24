@@ -1,0 +1,10 @@
+{
+  "name": "BIKRAM JIMI Digital Platform",
+  "short_name": "BIKRAM JIMI",
+  "description": "A Nepali and English digital platform.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c0f18",
+  "theme_color": "#10131d",
+  "icons": []
+}
